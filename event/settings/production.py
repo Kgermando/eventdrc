@@ -80,18 +80,17 @@ WSGI_APPLICATION = 'event.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'event_db',
+        'USER': 'germain',
+        'PASSWORD': 'kataku',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
-
-# add this
-import dj_database_url
-# DATABASES['default'] = dj_database_url.config()
-DATABASES['default'] = dj_database_url.parse('postgres://xhmqgpjescbekh:0f1a435e9bdcc4caaeb1710ea7bec5a59aacfedbe86990318483cfa104e55d40@ec2-54-221-243-211.compute-1.amazonaws.com:5432/d38lomch2qj8m1')
-
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
