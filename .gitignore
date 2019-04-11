@@ -15,3 +15,5 @@ get-logs.sftp
 uwsgi.log
 .idea
 local.py
+media
+staticfiles
